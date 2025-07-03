@@ -7,12 +7,20 @@ body {
 }
 
 header {
+  position: fixed;
+  width: 100%;
   background-color: #0077cc;
   color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 nav ul {
@@ -28,23 +36,60 @@ nav a {
   text-decoration: none;
 }
 
+nav a:hover {
+  color: #041151;
+  font-weight: bold;
+  font-size: large;
+}
+
 .hero {
   text-align: center;
   padding: 4rem 2rem;
   background: linear-gradient(to right, #0077cc, #00c6ff);
   color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+#container {
+  margin-top: 2rem;
+  border: 1px solid rgb(232, 23, 23);
 }
 
 section {
-  padding: 2rem;
   max-width: 900px;
+  padding: 2rem;
   margin: auto;
+  scroll-margin-top: 100px;
+}
+main {
+  max-width: 900px;
+  padding: 2rem;
+  margin: auto;
+  scroll-margin-top: 100px;
+}
+main:target {
+  padding-top: 3rem;
+
+  border-radius: 8px;
+  background-color: #00c6ff;
+  transition: background-color 0.3s;
+}
+
+section:target {
+  padding-top: 3rem;
+
+  border-radius: 8px;
+  background-color: #00c6ff;
+  transition: background-color 0.3s;
+}
+section:target p {
+  color: white;
 }
 
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .skills-list li {
@@ -59,6 +104,36 @@ section {
   margin-bottom: 1rem;
   border-radius: 8px;
   background-color: white;
+}
+
+#projects a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+#resume a:hover {
+  text-decoration: underline;
+  color: #474a4c;
+}
+
+#contact {
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+}
+
+#contact a {
+  color: blue;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+  color: #474a4c;
+}
+
+#contact i {
+  margin-right: 8px;
+  color: #0077b5; /* blue for LinkedIn/email/phone */
 }
 
 footer {

@@ -77,7 +77,7 @@ main:target {
 
 section:target {
   padding-top: 3rem;
-
+  font-size: large;
   border-radius: 8px;
   background-color: #00c6ff;
   transition: background-color 0.3s;
@@ -142,20 +142,60 @@ footer {
   background-color: #f1f1f1;
   margin-top: 2rem;
 }
+footer p {
+  margin: 0;
+  color: #666;
+}
 
 /*  Responsive Design*/
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
     align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 0.5rem 0;
+    display: block;
+    font-size: 1rem;
   }
 
   .hero {
-    padding: 2rem 1rem;
-    font-size: 90%;
+    /* padding: 3rem 1rem; */
+    font-size: 1rem;
   }
 
-  section {
+  .skills-list {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .project {
+    width: 100%;
+    box-sizing: border-box;
     padding: 1rem;
+  }
+
+  section,
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  #contact p,
+  #contact a {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 0.5rem;
   }
 }
